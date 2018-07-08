@@ -13,7 +13,7 @@
 ### 数据类型
 [1. 整型](https://github.com/hjj5258/Java/blob/master/JavaSE/06.%E6%95%B4%E5%9E%8B.md)
 
-[2. 浮点]()
+[2. 浮点](https://github.com/hjj5258/Java/blob/master/JavaSE/07.%E6%B5%AE%E7%82%B9%E5%9E%8B.md)
 
 [3. 字符]()
 
