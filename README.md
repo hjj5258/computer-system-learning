@@ -15,9 +15,9 @@
 
 [2. 浮点](https://github.com/hjj5258/Java/blob/master/JavaSE/07.%E6%B5%AE%E7%82%B9%E5%9E%8B.md)
 
-[3. 字符]()
+[3. 字符](https://github.com/hjj5258/Java/blob/master/JavaSE/08.%E5%AD%97%E7%AC%A6%E5%9E%8B.md)
 
-[4. 布尔]()
+[4. 布尔](https://github.com/hjj5258/Java/blob/master/JavaSE/09.%E5%B8%83%E5%B0%94%E5%9E%8B.md)
 
 [5. String]()
 
