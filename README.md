@@ -10,8 +10,8 @@
 
 [5. 标识符与关键字](https://github.com/hjj5258/Java/blob/master/JavaSE/05.%E6%A0%87%E8%AF%86%E7%AC%A6%E4%B8%8E%E5%85%B3%E9%94%AE%E5%AD%97.md)
 
-### 数据类型（TODO）
-[1. 整型]()
+### 数据类型
+[1. 整型](https://github.com/hjj5258/Java/blob/master/JavaSE/06.%E6%95%B4%E5%9E%8B.md)
 
 [2. 浮点]()
 
