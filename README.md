@@ -19,7 +19,7 @@
 
 [4. 布尔](https://github.com/hjj5258/Java/blob/master/JavaSE/09.%E5%B8%83%E5%B0%94%E5%9E%8B.md)
 
-[5. String]()
+[5. String](https://github.com/hjj5258/Java/blob/master/JavaSE/10.String%E5%AD%97%E7%AC%A6%E4%B8%B2.md)
 
 ### 运算符
 [1. 数学运算符]()
