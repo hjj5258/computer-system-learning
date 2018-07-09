@@ -44,9 +44,9 @@
 [6. 循环嵌套](https://github.com/hjj5258/Java/blob/master/JavaSE/20.%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97.md)
 
 ### 方法
-[1. 定义]()
+[1. 定义](https://github.com/hjj5258/Java/blob/master/JavaSE/21.%E6%96%B9%E6%B3%95%E5%AE%9A%E4%B9%89.md)
 
-[2. 重载]()
+[2. 重载](https://github.com/hjj5258/Java/blob/master/JavaSE/22.%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD.md)
 
-[3. 递归调用]()
+[3. 递归调用](https://github.com/hjj5258/Java/blob/master/JavaSE/23.%E9%80%92%E5%BD%92%E8%B0%83%E7%94%A8.md)
 # JavaEE
