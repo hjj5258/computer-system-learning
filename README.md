@@ -73,6 +73,6 @@
 
 [1.this](https://github.com/hjj5258/Java/blob/master/JavaSE/32.this.md)
 
-[1.简单Java类](https://github.com/hjj5258/Java/blob/master/JavaSE/33.%E7%AE%80%E5%8D%95Java%E7%B1%BB.md)
+[2.简单Java类](https://github.com/hjj5258/Java/blob/master/JavaSE/33.%E7%AE%80%E5%8D%95Java%E7%B1%BB.md)
 
 # JavaEE
