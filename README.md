@@ -75,4 +75,18 @@
 
 [2. 简单Java类](https://github.com/hjj5258/Java/blob/master/JavaSE/33.%E7%AE%80%E5%8D%95Java%E7%B1%BB.md)
 
+### static关键字
+[1. 声明static]()
+
+[2. 声明static方法]()
+
+[3. static应用案例]()
+### 代码块
+[1. 普通代码块]()
+
+[2. 构造代码块]()
+
+[3. 静态代码块]()
+### 面向对象案例分析
+
 # JavaEE
