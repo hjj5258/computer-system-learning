@@ -76,7 +76,7 @@
 [2. 简单Java类](https://github.com/hjj5258/Java/blob/master/JavaSE/33.%E7%AE%80%E5%8D%95Java%E7%B1%BB.md)
 
 ### static关键字
-[1. 声明static]()
+[1. 声明static属性]()
 
 [2. 声明static方法]()
 
