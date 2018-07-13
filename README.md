@@ -76,11 +76,11 @@
 [2. 简单Java类](https://github.com/hjj5258/Java/blob/master/JavaSE/33.%E7%AE%80%E5%8D%95Java%E7%B1%BB.md)
 
 ### static关键字
-[1. 声明static属性]()
+[1. 声明static属性](https://github.com/hjj5258/Java/blob/master/JavaSE/34.%E5%A3%B0%E6%98%8Estatic%E5%B1%9E%E6%80%A7.md)
 
-[2. 声明static方法]()
+[2. 声明static方法](https://github.com/hjj5258/Java/blob/master/JavaSE/35.%E5%A3%B0%E6%98%8Estatic%E6%96%B9%E6%B3%95.md)
 
-[3. static应用案例]()
+[3. static应用案例](https://github.com/hjj5258/Java/blob/master/JavaSE/36.static%E5%BA%94%E7%94%A8%E6%A1%88%E4%BE%8B.md)
 ### 代码块
 [1. 普通代码块]()
 
