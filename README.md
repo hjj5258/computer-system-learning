@@ -82,11 +82,11 @@
 
 [3. static应用案例](https://github.com/hjj5258/Java/blob/master/JavaSE/36.static%E5%BA%94%E7%94%A8%E6%A1%88%E4%BE%8B.md)
 ### 代码块
-[1. 普通代码块]()
+[1. 普通代码块](https://github.com/hjj5258/Java/blob/master/JavaSE/37.%E6%99%AE%E9%80%9A%E4%BB%A3%E7%A0%81%E5%9D%97.md)
 
-[2. 构造代码块]()
+[2. 构造代码块](https://github.com/hjj5258/Java/blob/master/JavaSE/38.%E6%9E%84%E9%80%A0%E4%BB%A3%E7%A0%81%E5%9D%97.md)
 
-[3. 静态代码块]()
+[3. 静态代码块](https://github.com/hjj5258/Java/blob/master/JavaSE/39.%E9%9D%99%E6%80%81%E4%BB%A3%E7%A0%81%E5%9D%97.md)
 ### 面向对象案例分析
 
 # JavaEE
