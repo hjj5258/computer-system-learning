@@ -1,3 +1,4 @@
+# 本文是学习的笔录，来自于网络收集，图片引用于魔乐科技培训视频
 # JavaSE
 ### 基础
 [1. 前言](https://github.com/hjj5258/Java/blob/master/JavaSE/01.%E5%89%8D%E8%A8%80.md)
