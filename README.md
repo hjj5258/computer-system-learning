@@ -88,9 +88,9 @@
 
 [3. 静态代码块](https://github.com/hjj5258/Java/blob/master/JavaSE/39.%E9%9D%99%E6%80%81%E4%BB%A3%E7%A0%81%E5%9D%97.md)
 ### 数组的定义与使用
-[1. 数组的基本定义]()
+[1. 数组的基本定义](https://github.com/hjj5258/Java/blob/master/JavaSE/40.%E6%95%B0%E7%BB%84%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%AE%9A%E4%B9%89.md)
 
-[2. 数组的引用传递分析]()
+[2. 数组的引用传递分析](https://github.com/hjj5258/Java/blob/master/JavaSE/41.%E6%95%B0%E7%BB%84%E5%BC%95%E7%94%A8%E4%BC%A0%E9%80%92%E5%88%86%E6%9E%90.md)
 
 [3. foreach]()
 
