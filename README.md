@@ -92,9 +92,9 @@
 
 [2. 数组的引用传递分析](https://github.com/hjj5258/Java/blob/master/JavaSE/41.%E6%95%B0%E7%BB%84%E5%BC%95%E7%94%A8%E4%BC%A0%E9%80%92%E5%88%86%E6%9E%90.md)
 
-[3. foreach]()
+[3. foreach](https://github.com/hjj5258/Java/blob/master/JavaSE/42.foreach%E8%BE%93%E5%87%BA.md)
 
-[4. 二维数组]()
+[4. 二维数组](https://github.com/hjj5258/Java/blob/master/JavaSE/43.%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84.md)
 
 [5. 数组与方法]()
 
