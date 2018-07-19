@@ -96,7 +96,7 @@
 
 [4. 二维数组](https://github.com/hjj5258/Java/blob/master/JavaSE/43.%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84.md)
 
-[5. 数组与方法]()
+[5. 数组与方法](https://github.com/hjj5258/Java/blob/master/JavaSE/44.%E6%95%B0%E7%BB%84%E4%B8%8E%E6%96%B9%E6%B3%95.md)
 
 [6. 数组排序案例分析1]()
 
