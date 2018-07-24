@@ -98,13 +98,13 @@
 
 [5. 数组与方法](https://github.com/hjj5258/Java/blob/master/JavaSE/44.%E6%95%B0%E7%BB%84%E4%B8%8E%E6%96%B9%E6%B3%95.md)
 
-[6. 数组排序案例分析1]()
+[6. 数组排序案例分析1](https://github.com/hjj5258/Java/blob/master/JavaSE/45.%E6%95%B0%E7%BB%84%E6%8E%92%E5%BA%8F%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%901.md)
 
-[7. 数组排序案例分析2]()
+[7. 数组排序案例分析2](https://github.com/hjj5258/Java/blob/master/JavaSE/46.%E6%95%B0%E7%BB%84%E6%8E%92%E5%BA%8F%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%902.md)
 
-[8. 数组的相关类库]()
+[8. 数组的相关类库](https://github.com/hjj5258/Java/blob/master/JavaSE/47.%E6%95%B0%E7%BB%84%E7%9B%B8%E5%85%B3%E7%B1%BB%E5%BA%93.md)
 
-[9. 方法可变参数]()
+[9. 方法可变参数](https://github.com/hjj5258/Java/blob/master/JavaSE/47.%E6%95%B0%E7%BB%84%E7%9B%B8%E5%85%B3%E7%B1%BB%E5%BA%93.md)
 
-[10. 对象数组]()
+[10. 对象数组](https://github.com/hjj5258/Java/blob/master/JavaSE/49.%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84.md)
 # JavaEE
