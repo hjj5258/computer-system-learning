@@ -4,7 +4,7 @@ import org.junit.Test;
 public class ArrayTest {
     @Test
     public void basicsTest() {
-        Array<Integer> array = new Array();
+        Array<Integer> array = new Array(); // default capacity 10
         for (int i = 0; i < 8; i++) {
             array.addLast(i);
         }
@@ -31,6 +31,13 @@ public class ArrayTest {
         array.removeElement(element);
         System.out.println("removeElement");
         System.out.println(array);
+
+        // add 6 element for dynamic capacity
+        for (int i = 0; i < 6; i++) {
+            array.addLast(i);
+        }
+        System.out.println(array);
+        System.out.println("capacity:" + array.getCapacity());
     }
 
 }

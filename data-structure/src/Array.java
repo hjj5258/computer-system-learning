@@ -54,17 +54,25 @@ public class Array<E> {
      * @param e
      */
     public void add(int index, E e) {
-        if (data.length == size) {
-            throw new IllegalArgumentException("Add failed. Array is full.");
-        }
         if (index < 0 || index > size) {
             throw new IllegalArgumentException("Add failed. Require index >= 0 and index <= size.");
+        }
+        if (data.length == size) {
+            resieze(2 * data.length);
         }
         for (int i = size - 1; i >= index; i--) {
             data[i + 1] = data[i];
         }
         data[index] = e;
         size++;
+    }
+
+    private void resieze(int newCapacity) {
+        E[] newData = (E[]) new Object[newCapacity];
+        for (int i = 0; i < size; i++) {
+            newData[i] = data[i];
+        }
+        data = newData;
     }
 
     /**
@@ -76,7 +84,7 @@ public class Array<E> {
     public boolean contains(E e) {
         boolean res = false;
         for (int i = 0; i < size; i++) {
-            if (data[i].equals( e)) {
+            if (data[i].equals(e)) {
                 res = true;
                 break;
             }
