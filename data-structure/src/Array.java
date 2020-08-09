@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Array {
@@ -69,12 +70,73 @@ public class Array {
         size++;
     }
 
+    /**
+     * 是否包含该元素
+     *
+     * @param e
+     * @return
+     */
+    public boolean contains(int e) {
+        boolean res = false;
+        for (int i = 0; i < size; i++) {
+            if (data[i] == e) {
+                res = true;
+                break;
+            }
+        }
+        return res;
+    }
+
+    /**
+     * 删除第一个元素
+     *
+     * @param index
+     * @return
+     */
+    public int remove(int index) {
+        if (index < 0 || index > size) {
+            throw new IllegalArgumentException("Remove failed. Index is illegal.");
+        }
+        int ret = data[index];
+        for (int i = index + 1; i < size; i++) {
+            data[i - 1] = data[i];
+        }
+        size--;
+        return ret;
+    }
+
+    public int removeFirst() {
+        return remove(0);
+    }
+
+    public int removeLast() {
+        return remove(size - 1);
+    }
+
+    public void removeElement(int e) {
+        int index = find(e);
+        if (index != -1) {
+            remove(index);
+        }
+    }
+
+    public int find(int e) {
+        int res = -1;
+        for (int i = 0; i < size; i++) {
+            if (data[i] == e) {
+                res = i;
+                break;
+            }
+        }
+        return res;
+    }
+
     @Override
     public String toString() {
         StringBuilder str = new StringBuilder();
         str.append("[");
-        for (int i = 0; i < data.length; i++) {
-            if (i == data.length - 1) {
+        for (int i = 0; i < size; i++) {
+            if (i == size - 1) {
                 str.append(data[i]);
             } else {
                 str.append(data[i] + ",");
@@ -83,4 +145,5 @@ public class Array {
         str.append("]");
         return str.toString();
     }
+
 }
