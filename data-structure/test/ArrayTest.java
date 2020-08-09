@@ -32,12 +32,20 @@ public class ArrayTest {
         System.out.println("removeElement");
         System.out.println(array);
 
+        System.out.println("old capacity:" + array.getCapacity());
         // add 6 element for dynamic capacity
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < 15; i++) {
             array.addLast(i);
         }
         System.out.println(array);
-        System.out.println("capacity:" + array.getCapacity());
+        System.out.println("new capacity:" + array.getCapacity());
+
+        // capacity is 20,1/2 = 10
+        for (int i = 0; i < 10; i++) {
+            array.removeLast();
+        }
+        System.out.println(array);
+        System.out.println("sub new capacity:" + array.getCapacity());
     }
 
 }

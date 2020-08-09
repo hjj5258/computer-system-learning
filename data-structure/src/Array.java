@@ -58,7 +58,7 @@ public class Array<E> {
             throw new IllegalArgumentException("Add failed. Require index >= 0 and index <= size.");
         }
         if (data.length == size) {
-            resieze(2 * data.length);
+            resize(2 * data.length);
         }
         for (int i = size - 1; i >= index; i--) {
             data[i + 1] = data[i];
@@ -67,7 +67,12 @@ public class Array<E> {
         size++;
     }
 
-    private void resieze(int newCapacity) {
+    /**
+     * 扩容
+     *
+     * @param newCapacity
+     */
+    private void resize(int newCapacity) {
         E[] newData = (E[]) new Object[newCapacity];
         for (int i = 0; i < size; i++) {
             newData[i] = data[i];
@@ -107,6 +112,12 @@ public class Array<E> {
             data[i - 1] = data[i];
         }
         size--;
+        data[size] = null; // do gc
+
+        // 当个数到达容量的1/2时，进行缩容
+        if (size == data.length / 2) {
+            resize(data.length / 2);
+        }
         return ret;
     }
 
