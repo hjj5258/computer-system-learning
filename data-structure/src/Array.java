@@ -1,8 +1,5 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-
-public class Array {
-    private int[] data;
+public class Array<E> {
+    private E[] data;
     private int size;
 
     /**
@@ -11,7 +8,7 @@ public class Array {
      * @param capacity 容量
      */
     public Array(int capacity) {
-        data = new int[capacity];
+        data = (E[]) new Object[capacity];
         size = 0;
     }
 
@@ -46,7 +43,7 @@ public class Array {
      *
      * @param e
      */
-    public void addLast(int e) {
+    public void addLast(E e) {
         add(size, e);
     }
 
@@ -56,7 +53,7 @@ public class Array {
      * @param index
      * @param e
      */
-    public void add(int index, int e) {
+    public void add(int index, E e) {
         if (data.length == size) {
             throw new IllegalArgumentException("Add failed. Array is full.");
         }
@@ -76,10 +73,10 @@ public class Array {
      * @param e
      * @return
      */
-    public boolean contains(int e) {
+    public boolean contains(E e) {
         boolean res = false;
         for (int i = 0; i < size; i++) {
-            if (data[i] == e) {
+            if (data[i].equals( e)) {
                 res = true;
                 break;
             }
@@ -93,11 +90,11 @@ public class Array {
      * @param index
      * @return
      */
-    public int remove(int index) {
+    public E remove(int index) {
         if (index < 0 || index > size) {
             throw new IllegalArgumentException("Remove failed. Index is illegal.");
         }
-        int ret = data[index];
+        E ret = data[index];
         for (int i = index + 1; i < size; i++) {
             data[i - 1] = data[i];
         }
@@ -105,25 +102,25 @@ public class Array {
         return ret;
     }
 
-    public int removeFirst() {
+    public E removeFirst() {
         return remove(0);
     }
 
-    public int removeLast() {
+    public E removeLast() {
         return remove(size - 1);
     }
 
-    public void removeElement(int e) {
+    public void removeElement(E e) {
         int index = find(e);
         if (index != -1) {
             remove(index);
         }
     }
 
-    public int find(int e) {
+    public int find(E e) {
         int res = -1;
         for (int i = 0; i < size; i++) {
-            if (data[i] == e) {
+            if (data[i].equals(e)) {
                 res = i;
                 break;
             }
