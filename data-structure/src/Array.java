@@ -114,8 +114,8 @@ public class Array<E> {
         size--;
         data[size] = null; // do gc
 
-        // 当个数到达容量的1/2时，进行缩容
-        if (size == data.length / 2) {
+        // 当个数到达容量的1/4时，进行缩容 lazy
+        if (size == data.length / 4 && data.length / 2 != 0) {
             resize(data.length / 2);
         }
         return ret;
@@ -145,6 +145,26 @@ public class Array<E> {
             }
         }
         return res;
+    }
+
+    public E get(int index) {
+        if (index < 0 || index >= size)
+            throw new IllegalArgumentException("Get failed. Index is illegal.");
+        return data[index];
+    }
+
+    public E getLast() {
+        return get(size - 1);
+    }
+
+    public E getFirst() {
+        return get(0);
+    }
+
+    public void set(int index, E e) {
+        if (index < 0 || index >= size)
+            throw new IllegalArgumentException("Set failed. Index is illegal.");
+        data[index] = e;
     }
 
     @Override
