@@ -14,27 +14,31 @@ public class Template {
 
     /**
      * 比较
+     *
      * @param v
      * @param w
      * @return
      */
-    private static boolean less(Comparable v, Comparable w) {
+    public static boolean less(Comparable v, Comparable w) {
+        // compareTo v<w res:-1 v>w res:+R v=w res:0
+        // v.compareTo(w) < 0   v是否小于w 小于返回true 反之 false
         return v.compareTo(w) < 0;
     }
 
     /**
      * 交换
+     *
      * @param a
      * @param i
      * @param j
      */
-    private static void exch(Comparable[] a, int i, int j) {
+    public static void exch(Comparable[] a, int i, int j) {
         Comparable t = a[i];
         a[i] = a[j];
         a[j] = t;
     }
 
-    private static void show(Comparable[] a) {
+    public static void show(Comparable[] a) {
         StringBuilder str = new StringBuilder();
         str.append("[");
         for (int i = 0; i < a.length; i++) {
@@ -45,19 +49,22 @@ public class Template {
             }
         }
         str.append("]");
+        System.out.println(str);
     }
 
     /**
      * 检测数组是否有序
+     *
      * @param a
      * @return
      */
     public static boolean isSorted(Comparable[] a) {
-        for (int i = 0; i < a.length; i++) {
+        for (int i = 1; i < a.length; i++) {
             if (less(a[i], a[i - 1])) {
                 return false;
             }
         }
         return true;
     }
+
 }
