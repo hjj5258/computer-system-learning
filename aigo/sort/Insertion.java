@@ -12,9 +12,9 @@ public class Insertion extends Template {
             // 其实就相当于后一位比较前一位 如果小于就换位 然后讲j指向换位后的左边 原j-1 现j 然后在向左边进行比较 直到 j>0 && less(a[j], a[j - 1])
             // 然后向左对比 循环结束 跳出该层级 i++ 向右挪位
             for (int j = i; j > 0 && less(a[j], a[j - 1]); j--) {
-                System.out.println("a[j]:" + a[j] + "---》" +"a[j-1]:" + a[j - 1]);
+//                System.out.println("a[j]:" + a[j] + "---》" +"a[j-1]:" + a[j - 1]);
                 exch(a, j, j - 1);
-                Insertion.show(a);
+//                Insertion.show(a);
             }
         }
     }
