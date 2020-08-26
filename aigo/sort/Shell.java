@@ -3,9 +3,14 @@
  * @create 2020/8/26 9:42
  */
 public class Shell extends Template {
+    /**
+     * 分组对比 交换 保持小块有序 在插排思想上延申（跳插？）
+     * @param a
+     */
     public static void sort(Comparable[] a) {
         int n = a.length;
         int h = 1;
+
         while (h < n / 3) {
             h = 3 * h + 1;
         }
