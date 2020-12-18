@@ -23,16 +23,18 @@ public class LinkedList<E> {
 
         @Override
         public String toString() {
-            return e.toString();
-
+            if (e != null) {
+                return e.toString();
+            }
+            return "";
         }
     }
 
-    private Node head;
+    private Node dummyHead;
     private int size;
 
     public LinkedList() {
-        this.head = null;
+        this.dummyHead = new Node(null, null);
         this.size = 0;
     }
 
@@ -54,40 +56,97 @@ public class LinkedList<E> {
 //        node.next = head;
 //        head = node;
 
-        head = new Node(e, head);
-        size++;
+        add(0, e);
+    }
+
+    /**
+     * 在链表尾部添加新元素
+     *
+     * @param e
+     */
+    public void addLast(E e) {
+//        Node node = new Node(e);
+//        node.next = head;
+//        head = node;
+
+        add(size - 1, e);
     }
 
     public void add(int index, E e) {
         if (index < 0 || index > size) {
             throw new IllegalArgumentException("Add failed. Illegal index.");
         }
-        if (index == 0) {
-            addFirst(e);
-        } else {
-            Node prevNode = head;
-            for (int i = 0; i < index - 1; i++) {
-                prevNode = prevNode.next;
+        Node prevNode = dummyHead;
+        for (int i = 0; i < index; i++) {
+            prevNode = prevNode.next;
 //                    Node node = new Node(e);
 //                    node.next = prevNode.next;
 //                    prevNode.next = node;
-            }
-            prevNode.next = new Node(e, prevNode.next);
-            size++;
         }
+        prevNode.next = new Node(e, prevNode.next);
+        size++;
+    }
+
+    /**
+     * 获取索引对应E
+     *
+     * @param index
+     * @return
+     */
+    public E get(int index) {
+        if (index < 0 || index >= size) {
+            throw new IllegalArgumentException("Get failed. Illegal index.");
+        }
+        Node cur = dummyHead.next;
+        for (int i = 0; i < index; i++) {
+            cur = cur.next;
+        }
+        return cur == null ? null : cur.e;
+    }
+
+    /**
+     * 获取最后一个对应E
+     *
+     * @return
+     */
+    public E getLast() {
+        return get(size - 1);
+    }
+
+    public void set(int index, E e) {
+        if (index < 0 || index >= size) {
+            throw new IllegalArgumentException("set failed. Illegal index.");
+        }
+        Node cur = dummyHead.next;
+        for (int i = 0; i < index; i++) {
+            cur = cur.next;
+        }
+
+        if (cur != null) {
+            cur.e = e;
+        }
+    }
+
+    public boolean contains(E e) {
+        Node cur = dummyHead.next;
+        while (cur != null) {
+            if (cur.e.equals(e)) {
+                return true;
+            }
+            cur = cur.next;
+        }
+        return false;
     }
 
     @Override
     public String toString() {
         StringBuilder str = new StringBuilder();
-        Node temp = head;
-        for (int i = 0; i < size; i++) {
-            str.append(temp.toString());
-            if (i != size - 1) {
-                str.append("->");
-            }
+        Node temp = dummyHead.next;
+        while (temp != null) {
+            str.append(temp + "->");
             temp = temp.next;
         }
+        str.append("NULL");
         return str.toString();
     }
 
@@ -99,7 +158,19 @@ public class LinkedList<E> {
         System.out.println(linkedList.toString());
 
         System.out.println("add operation");
-        linkedList.add(1,5);
+        linkedList.add(0, 5);
         System.out.println(linkedList.toString());
+        System.out.println("add last operation");
+        linkedList.addLast(7);
+        System.out.println(linkedList.toString());
+        System.out.println("get operation");
+        Integer getNode = linkedList.get(0);
+        System.out.println(getNode == null ? "null" : getNode.toString());
+
+        System.out.println("set operation");
+        linkedList.set(6, 10);
+        System.out.println(linkedList.toString());
+        System.out.println("contains operation");
+        System.out.println( linkedList.contains(-1));
     }
 }
