@@ -138,22 +138,28 @@ public class LinkedList<E> {
         return false;
     }
 
-    public void delete(int index){
+    public E remove(int index) {
         if (index < 0 || index >= size) {
             throw new IllegalArgumentException("Delete failed. Illegal index.");
         }
-        Node prev = dummyHead.next;
-        for (int i = 0; i < index - 1; i++) {
+        Node prev = dummyHead;
+        for (int i = 0; i < index; i++) {
             prev = prev.next;
         }
 
-        if (prev != null) {
-            Node delNode =  prev.next;
-            prev.next = delNode.next;
-            // do gc
-            delNode = null;
-        }
+        Node delNode = prev.next;
+        prev.next = delNode.next;
+        // do gc
+        delNode.next = null;
+        size--;
+
+        return delNode.e;
     }
+
+    public E removeLast() {
+        return remove(size - 1);
+    }
+
     @Override
     public String toString() {
         StringBuilder str = new StringBuilder();
@@ -187,10 +193,14 @@ public class LinkedList<E> {
         linkedList.set(6, 10);
         System.out.println(linkedList.toString());
         System.out.println("contains operation");
-        System.out.println( linkedList.contains(-1));
+        System.out.println(linkedList.contains(-1));
 
-        linkedList.delete(2);
-        System.out.println("delete   operation");
+        linkedList.remove(2);
+        System.out.println("remove   operation");
+        System.out.println(linkedList.toString());
+
+        linkedList.removeLast();
+        System.out.println("removeLast   operation");
         System.out.println(linkedList.toString());
     }
 }
