@@ -113,6 +113,15 @@ public class LinkedList<E> {
         return get(size - 1);
     }
 
+    /**
+     * 获取最前一个对应E
+     *
+     * @return
+     */
+    public E getFirst() {
+        return get(0);
+    }
+
     public void set(int index, E e) {
         if (index < 0 || index >= size) {
             throw new IllegalArgumentException("set failed. Illegal index.");
@@ -154,6 +163,10 @@ public class LinkedList<E> {
         size--;
 
         return delNode.e;
+    }
+
+    public E removeFirst() {
+        return remove(0);
     }
 
     public E removeLast() {

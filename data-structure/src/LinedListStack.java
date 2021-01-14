@@ -52,7 +52,7 @@ public class LinedListStack<E> implements Stack<E> {
      */
     @Override
     public E pop() {
-        return data.removeLast();
+        return data.removeFirst();
     }
 
     /**
@@ -62,7 +62,7 @@ public class LinedListStack<E> implements Stack<E> {
      */
     @Override
     public E peek() {
-        return data.getLast();
+        return data.getFirst();
     }
 
     @Override
@@ -79,6 +79,7 @@ public class LinedListStack<E> implements Stack<E> {
         linedListStack.push(2);
         linedListStack.push(3);
         System.out.println("push 1 2 3");
+        System.out.println("peek:" + linedListStack.peek());
         System.out.println("linedListStack:" + linedListStack.toString());
         System.out.println("pop: " + linedListStack.pop());
         System.out.println("linedListStack:" + linedListStack.toString());
@@ -86,5 +87,6 @@ public class LinedListStack<E> implements Stack<E> {
         System.out.println("linedListStack:" + linedListStack.toString());
         System.out.println("pop: " + linedListStack.pop());
         System.out.println("linedListStack:" + linedListStack.toString());
+
     }
 }
