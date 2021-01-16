@@ -2,10 +2,10 @@
  * 链表实现栈
  * 先进后出
  */
-public class LinedListStack<E> implements Stack<E> {
+public class LinkedListStack<E> implements Stack<E> {
     private LinkedList<E> data;
 
-    public LinedListStack() {
+    public LinkedListStack() {
         data = new LinkedList<>();
     }
 
@@ -71,22 +71,22 @@ public class LinedListStack<E> implements Stack<E> {
     }
 
     public static void main(String[] args) {
-        LinedListStack<Integer> linedListStack = new LinedListStack<>();
+        LinkedListStack<Integer> linkedListStack = new LinkedListStack<>();
         System.out.println("init LinedListStack");
-        System.out.println("linedListStack:" + linedListStack.toString());
-        System.out.println("data isEmpty ? " + linedListStack.isEmpty());
-        linedListStack.push(1);
-        linedListStack.push(2);
-        linedListStack.push(3);
+        System.out.println("linedListStack:" + linkedListStack.toString());
+        System.out.println("data isEmpty ? " + linkedListStack.isEmpty());
+        linkedListStack.push(1);
+        linkedListStack.push(2);
+        linkedListStack.push(3);
         System.out.println("push 1 2 3");
-        System.out.println("peek:" + linedListStack.peek());
-        System.out.println("linedListStack:" + linedListStack.toString());
-        System.out.println("pop: " + linedListStack.pop());
-        System.out.println("linedListStack:" + linedListStack.toString());
-        System.out.println("pop: " + linedListStack.pop());
-        System.out.println("linedListStack:" + linedListStack.toString());
-        System.out.println("pop: " + linedListStack.pop());
-        System.out.println("linedListStack:" + linedListStack.toString());
+        System.out.println("peek:" + linkedListStack.peek());
+        System.out.println("linedListStack:" + linkedListStack.toString());
+        System.out.println("pop: " + linkedListStack.pop());
+        System.out.println("linedListStack:" + linkedListStack.toString());
+        System.out.println("pop: " + linkedListStack.pop());
+        System.out.println("linedListStack:" + linkedListStack.toString());
+        System.out.println("pop: " + linkedListStack.pop());
+        System.out.println("linedListStack:" + linkedListStack.toString());
 
     }
 }

@@ -3,8 +3,16 @@
  * @param <E>
  */
 public interface Queue<E> {
+    /**
+     * 入队列
+     * @param e
+     */
     void enQueue(E e);
 
+    /**
+     * 出队列
+     * @return
+     */
     E deQueue();
 
     /**
