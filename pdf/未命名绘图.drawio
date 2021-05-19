@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-05-19T09:17:25.065Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36" etag="lnikzUIlhjR2dZq1M6vq" version="14.6.13" type="github">
+<mxfile host="app.diagrams.net" modified="2021-05-19T09:23:49.085Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36" etag="4HcBKoAVvds8lu3GesrE" version="14.6.13" type="github">
   <diagram id="iwTj0vibkxEMLBBduAxx" name="第 1 页">
     <mxGraphModel dx="950" dy="435" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -102,6 +102,30 @@
         </mxCell>
         <mxCell id="bQga--vCsH2C9X24fxby-24" value="table_name   varchar(100)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="bQga--vCsH2C9X24fxby-15">
           <mxGeometry y="234" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="bQga--vCsH2C9X24fxby-27" value="event_productname_app_businessname" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="380" y="650" width="220" height="208" as="geometry" />
+        </mxCell>
+        <mxCell id="bQga--vCsH2C9X24fxby-28" value="id             bigint(22)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="bQga--vCsH2C9X24fxby-27">
+          <mxGeometry y="26" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="bQga--vCsH2C9X24fxby-29" value="event_id       bigint(22)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="bQga--vCsH2C9X24fxby-27">
+          <mxGeometry y="52" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="bQga--vCsH2C9X24fxby-30" value="is_guest       tinyint" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="bQga--vCsH2C9X24fxby-27">
+          <mxGeometry y="78" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="bQga--vCsH2C9X24fxby-31" value="unique_id      varchar(50)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="bQga--vCsH2C9X24fxby-27">
+          <mxGeometry y="104" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="bQga--vCsH2C9X24fxby-32" value="create_time    datetime" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="bQga--vCsH2C9X24fxby-27">
+          <mxGeometry y="130" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="bQga--vCsH2C9X24fxby-33" value="params         varchar(255)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="bQga--vCsH2C9X24fxby-27">
+          <mxGeometry y="156" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="bQga--vCsH2C9X24fxby-34" value="client_version varchar(100)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="bQga--vCsH2C9X24fxby-27">
+          <mxGeometry y="182" width="220" height="26" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
