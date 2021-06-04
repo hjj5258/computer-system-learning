@@ -7,7 +7,7 @@ public interface Set<E> {
 
     void remove(E e);
 
-    boolean contains();
+    boolean contains(E e);
 
     int getSize();
 

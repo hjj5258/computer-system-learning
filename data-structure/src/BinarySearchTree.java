@@ -1,7 +1,7 @@
 import java.util.LinkedList;
-import java.util.Objects;
 import java.util.Queue;
 import java.util.Stack;
+import java.util.*;
 
 /**
  * @author hjj
@@ -374,10 +374,45 @@ public class BinarySearchTree<E extends Comparable<E>> {
 //        System.out.println("Result value is " + searchTree.removeMax());
 //        System.out.println(searchTree);
 
-        System.out.println("Test before remove method");
-        System.out.println(searchTree);
-        System.out.println("Test remove method");
-        searchTree.remove(11);
-        System.out.println(searchTree);
+//        System.out.println("Test before remove method");
+//        System.out.println(searchTree);
+//        System.out.println("Test remove method");
+//        searchTree.remove(11);
+//        System.out.println(searchTree);
+
+
+        System.out.println("Pride and Prejudice");
+        long startTime = System.currentTimeMillis();
+
+        ArrayList<String> words1 = new ArrayList<>();
+        if (FileOperation.readFile("data-structure/pride-and-prejudice.txt", words1)) {
+            System.out.println("Total words: " + words1.size());
+
+            BinarySearchTree<String> set1 = new BinarySearchTree<>();
+            for (String word : words1) {
+                set1.add(word);
+            }
+            System.out.println("Total different words: " + set1.size());
+        }
+
+        System.out.println();
+
+
+        System.out.println("A Tale of Two Cities");
+
+        ArrayList<String> words2 = new ArrayList<>();
+        if (FileOperation.readFile("data-structure/a-tale-of-two-cities.txt", words2)) {
+            System.out.println("Total words: " + words2.size());
+
+            BinarySearchTree<String> set2 = new BinarySearchTree<>();
+            for (String word : words2) {
+                set2.add(word);
+            }
+            System.out.println("Total different words: " + set2.size());
+        }
+
+        long endTime = System.currentTimeMillis();
+
+        System.out.println((endTime - startTime) / 1000 + "s");
     }
 }

@@ -165,6 +165,24 @@ public class LinkedList<E> {
         return delNode.e;
     }
 
+    public void removeElement(E e) {
+        Node prev = dummyHead;
+        while (prev.next != null) {
+            if (prev.next.e.equals(e)) {
+                break;
+            }
+            // 每次移动
+            prev = prev.next;
+        }
+
+        // 如果不等于null 说明找到了
+        if (prev.next != null) {
+            Node delNode = prev.next;
+            prev.next = delNode.next;
+            delNode.next = null;
+        }
+    }
+
     public E removeFirst() {
         return remove(0);
     }
