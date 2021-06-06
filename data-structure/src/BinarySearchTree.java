@@ -48,22 +48,6 @@ public class BinarySearchTree<E extends Comparable<E>> {
     }
 
     private Node add(Node node, E e) {
-//        if (node.e.compareTo(e) < 0 && node.left == null) {
-//            node.left = new Node(e);
-//            size++;
-//            return;
-//        }
-//
-//        if (node.e.compareTo(e) > 0 && node.right == null) {
-//            node.right = new Node(e);
-//            size++;
-//            return;
-//        }
-//
-//        if (node.e.compareTo(e) < 0) {
-//            add(node.left, e);
-//        } else add(node.right, e);
-
         // 如果没有节点则会新建root，或者有节点则递归到为空为止新建node
         if (node == null) {
             size++;
