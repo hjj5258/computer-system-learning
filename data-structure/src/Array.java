@@ -182,4 +182,12 @@ public class Array<E> {
         return str.toString();
     }
 
+    public void sawp(int i, int j) {
+        if (i < 0 || i >= size || j < 0 || j >= size) {
+            throw new IllegalArgumentException("Index is illegal");
+        }
+        E tmp = data[i];
+        data[i] = data[j];
+        data[j] = tmp;
+    }
 }
