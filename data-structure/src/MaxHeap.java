@@ -1,3 +1,5 @@
+import java.util.Random;
+
 /**
  * @author hjj
  * @create 2021/06/07/19:50
@@ -60,7 +62,7 @@ public class MaxHeap<E extends Comparable<E>> {
     }
 
     private void siftUp(int index) {
-        while (index > 0 && data.get(index).compareTo(data.get(parent(index))) < 0) {
+        while (index > 0 && data.get(parent(index)).compareTo(data.get(index)) < 0) {
             data.sawp(index, parent(index));
             index = parent(index);
         }
@@ -107,19 +109,23 @@ public class MaxHeap<E extends Comparable<E>> {
     }
 
     public static void main(String[] args) {
+        int n = 1000000;
+        MaxHeap<Integer> heap = new MaxHeap<>();
+        Random random = new Random();
+        for (int i = 0; i < n; i++) {
+            heap.add(random.nextInt(Integer.MAX_VALUE));
+        }
 
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = heap.extractMax();
+        }
+        for (int i = 1; i < n; i++) {
+            if (arr[i - 1] < arr[i]) {
+                throw new IllegalArgumentException("Error");
+            }
+        }
+
+        System.out.println("Test MaxHeap completed.");
     }
-
-//    private int siftUp(E e, int index) {
-//        // 往左走
-//        if (e.compareTo(data.get(index)) < 0) {
-//            return siftUp(e, leftChild(index));
-//        }
-//        // 往左走
-//        else if (e.compareTo(data.get(index)) > 0) {
-//            return siftUp(e, rightChild(index));
-//        } else {
-//            return index;
-//        }
-//    }
 }
