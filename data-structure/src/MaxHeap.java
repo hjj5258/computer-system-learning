@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Random;
 
 /**
@@ -13,6 +14,13 @@ public class MaxHeap<E extends Comparable<E>> {
 
     public MaxHeap() {
         data = new Array<>();
+    }
+
+    public MaxHeap(E[] arr) {
+        data = new Array<>(arr);
+        for (int i = parent(arr.length - 1); i >= 0; i--) {
+            siftDown(i);
+        }
     }
 
     public int getSize() {
@@ -63,7 +71,7 @@ public class MaxHeap<E extends Comparable<E>> {
 
     private void siftUp(int index) {
         while (index > 0 && data.get(parent(index)).compareTo(data.get(index)) < 0) {
-            data.sawp(index, parent(index));
+            data.swap(index, parent(index));
             index = parent(index);
         }
     }
@@ -86,46 +94,132 @@ public class MaxHeap<E extends Comparable<E>> {
             }
 
             // 否则进行交换，继续循环
-            data.sawp(index, j);
+            data.swap(index, j);
             // 交换完之后 index为j
             index = j;
         }
     }
 
-
     public E extractMax() {
         E ret = findMax();
-        data.sawp(0, data.getSize() - 1);
+        data.swap(0, data.getSize() - 1);
         data.removeLast();
         siftDown(0);
         return ret;
     }
 
-    private E findMax() {
+    public E findMax() {
         if (data.isEmpty()) {
             throw new IllegalArgumentException("Can not findMax when heap is empty.");
         }
         return data.get(0);
     }
 
-    public static void main(String[] args) {
-        int n = 1000000;
-        MaxHeap<Integer> heap = new MaxHeap<>();
-        Random random = new Random();
-        for (int i = 0; i < n; i++) {
-            heap.add(random.nextInt(Integer.MAX_VALUE));
-        }
-
-        int[] arr = new int[n];
-        for (int i = 0; i < n; i++) {
-            arr[i] = heap.extractMax();
-        }
-        for (int i = 1; i < n; i++) {
-            if (arr[i - 1] < arr[i]) {
-                throw new IllegalArgumentException("Error");
-            }
-        }
-
-        System.out.println("Test MaxHeap completed.");
+    public E replace(E e) {
+        E max = findMax();
+        data.set(0, e);
+        siftDown(0);
+        return max;
     }
+
+
+//    public static void main(String[] args) {
+//        int n = 1000000;
+//        Random random = new Random();
+////        MaxHeap<Integer> heap = new MaxHeap<>();
+////        for (int i = 0; i < n; i++) {
+////            heap.add(random.nextInt(Integer.MAX_VALUE));
+////        }
+////
+////        int[] arr = new int[n];
+////        for (int i = 0; i < n; i++) {
+////            arr[i] = heap.extractMax();
+////        }
+////        for (int i = 1; i < n; i++) {
+////            if (arr[i - 1] < arr[i]) {
+////                throw new IllegalArgumentException("Error");
+////            }
+////        }
+////        System.out.println("Test MaxHeap completed.");
+//
+//        Integer[] arr = new Integer[n];
+//        for (int i = 0; i < n; i++) {
+//            arr[i] = random.nextInt(Integer.MAX_VALUE);
+//        }
+//
+//        System.out.println("IsHeapify false : " + testHeap(arr, false) + " s");
+//        System.out.println("IsHeapify true : " + testHeap(arr, true) + " s");
+//    }
+//
+//    public static double testHeap(Integer[] testData, boolean isHeapify) {
+//        MaxHeap<Integer> maxHeap;
+//        long startTime = System.nanoTime();
+//        if (isHeapify == true) {
+//            maxHeap = new MaxHeap<>(testData);
+//        } else {
+//            maxHeap = new MaxHeap<>(testData.length);
+//            for (Integer num : testData) {
+//                maxHeap.add(num);
+//            }
+//        }
+//        long endTime = System.nanoTime();
+//
+//        int[] arr = new int[testData.length];
+//        for (int i = 0; i < testData.length; i++) {
+//            arr[i] = maxHeap.extractMax();
+//        }
+//        for (int i = 1; i < testData.length; i++) {
+//            if (arr[i - 1] < arr[i]) {
+//                throw new IllegalArgumentException("Error");
+//            }
+//        }
+//        System.out.println("Test MaxHeap completed.");
+//        return (endTime - startTime) / 1000000000.0;
+//    }
+
+
+    private static double testHeap(Integer[] testData, boolean isHeapify) {
+
+        long startTime = System.nanoTime();
+
+        MaxHeap<Integer> maxHeap;
+        if (isHeapify)
+            maxHeap = new MaxHeap<>(testData);
+        else {
+            maxHeap = new MaxHeap<>(testData.length);
+            for (int num : testData)
+                maxHeap.add(num);
+        }
+
+        long endTime = System.nanoTime();
+        int[] arr = new int[testData.length];
+        for (int i = 0; i < testData.length; i++)
+            arr[i] = maxHeap.extractMax();
+
+        for (int i = 1; i < testData.length; i++)
+            if (arr[i - 1] < arr[i])
+                throw new IllegalArgumentException("Error");
+        System.out.println("Test MaxHeap completed.");
+
+        return (endTime - startTime) / 1000000000.0;
+    }
+
+    public static void main(String[] args) throws InterruptedException {
+
+        int n = 10000000;
+
+        Random random = new Random();
+        Integer[] testData1 = new Integer[n];
+        for (int i = 0; i < n; i++)
+            testData1[i] = random.nextInt(Integer.MAX_VALUE);
+
+        Integer[] testData2 = Arrays.copyOf(testData1, n);
+
+        double time1 = testHeap(testData1, false);
+        System.out.println("Without heapify: " + time1 + " s");
+
+        double time2 = testHeap(testData2, true);
+        System.out.println("With heapify: " + time2 + " s");
+    }
+
 }
