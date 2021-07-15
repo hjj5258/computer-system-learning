@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/data-structure/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/data-structure/test" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/aigo/sort" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/aigo/acwing" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
