@@ -1,6 +1,7 @@
 package sort;
 
 /**
+ * 视频链接 https://www.bilibili.com/video/BV1Jt411P77c?p=30
  * 给定你一个长度为 n 的整数数列。
  * 请你使用快速排序对这个数列按照从小到大进行排序。
  * 并将排好序的数列按顺序输出。
@@ -30,14 +31,14 @@ import java.io.BufferedInputStream;
 
 class AcWing785 {
     public static void main(String[] args) {
-//        Scanner in = new Scanner(new BufferedInputStream(System.in));
-//        int n = in.nextInt();
-//        int arr[] = new int[n];
-//        for (int i = 0; i < n; i++) {
-//            arr[i] = in.nextInt();
-//        }
-        int arr[] = {3, 2, 1, 6, 5};
-        int n = arr.length;
+        Scanner in = new Scanner(new BufferedInputStream(System.in));
+        int n = in.nextInt();
+        int arr[] = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = in.nextInt();
+        }
+//        int arr[] = {3, 2, 1, 6, 5};
+//        int n = arr.length;
         sort(arr, 0, n - 1);
         for (int i = 0; i < n; i++) {
             System.out.println(arr[i]);
