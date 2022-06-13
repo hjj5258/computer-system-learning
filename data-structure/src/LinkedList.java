@@ -69,7 +69,7 @@ public class LinkedList<E> {
 //        node.next = head;
 //        head = node;
 
-        add(size - 1, e);
+        add(size, e);
     }
 
     public void add(int index, E e) {
@@ -205,33 +205,34 @@ public class LinkedList<E> {
 
     public static void main(String[] args) {
         LinkedList<Integer> linkedList = new LinkedList<>();
-        for (int i = 0; i < 5; i++) {
-            linkedList.addFirst(i);
-        }
-        System.out.println(linkedList.toString());
-
-        System.out.println("add operation");
-        linkedList.add(0, 5);
-        System.out.println(linkedList.toString());
-        System.out.println("add last operation");
-        linkedList.addLast(7);
-        System.out.println(linkedList.toString());
-        System.out.println("get operation");
-        Integer getNode = linkedList.get(0);
-        System.out.println(getNode == null ? "null" : getNode.toString());
-
-        System.out.println("set operation");
-        linkedList.set(6, 10);
-        System.out.println(linkedList.toString());
-        System.out.println("contains operation");
-        System.out.println(linkedList.contains(-1));
-
-        linkedList.remove(2);
-        System.out.println("remove   operation");
-        System.out.println(linkedList.toString());
-
-        linkedList.removeLast();
-        System.out.println("removeLast   operation");
+        linkedList.addLast(1);
+//        for (int i = 0; i < 5; i++) {
+//            linkedList.addFirst(i);
+//        }
+//        System.out.println(linkedList.toString());
+//
+//        System.out.println("add operation");
+//        linkedList.add(0, 5);
+//        System.out.println(linkedList.toString());
+//        System.out.println("add last operation");
+//        linkedList.addLast(7);
+//        System.out.println(linkedList.toString());
+//        System.out.println("get operation");
+//        Integer getNode = linkedList.get(0);
+//        System.out.println(getNode == null ? "null" : getNode.toString());
+//
+//        System.out.println("set operation");
+//        linkedList.set(6, 10);
+//        System.out.println(linkedList.toString());
+//        System.out.println("contains operation");
+//        System.out.println(linkedList.contains(-1));
+//
+//        linkedList.remove(2);
+//        System.out.println("remove   operation");
+//        System.out.println(linkedList.toString());
+//
+//        linkedList.removeLast();
+//        System.out.println("removeLast   operation");
         System.out.println(linkedList.toString());
     }
 }
