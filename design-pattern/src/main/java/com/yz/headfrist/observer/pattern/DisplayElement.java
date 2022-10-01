@@ -1,4 +1,4 @@
-package com.yz.observer.pattern;
+package com.yz.headfrist.observer.pattern;
 
 /**
  * 公共显示接口

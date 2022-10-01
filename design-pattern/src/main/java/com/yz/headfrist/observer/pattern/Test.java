@@ -1,4 +1,4 @@
-package com.yz.observer.pattern;
+package com.yz.headfrist.observer.pattern;
 
 public class Test {
     public static void main(String[] args) {

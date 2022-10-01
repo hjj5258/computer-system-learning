@@ -1,4 +1,4 @@
-package com.yz.observer.pattern;
+package com.yz.headfrist.observer.pattern;
 
 public class CurrentConditionsDisplay implements Observer, DisplayElement {
     // 温度

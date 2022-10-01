@@ -1,4 +1,4 @@
-package com.yz.observer.pattern;
+package com.yz.headfrist.observer.pattern;
 
 import java.util.ArrayList;
 

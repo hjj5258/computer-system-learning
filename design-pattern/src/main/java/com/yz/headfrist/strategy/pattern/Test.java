@@ -1,4 +1,4 @@
-package com.yz.strategy.pattern;
+package com.yz.headfrist.strategy.pattern;
 
 public class Test {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.yz.strategy.pattern;
+package com.yz.headfrist.strategy.pattern;
 
 /**
  * 叫行为能力抽象

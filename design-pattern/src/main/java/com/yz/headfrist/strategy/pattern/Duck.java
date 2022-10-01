@@ -1,4 +1,4 @@
-package com.yz.strategy.pattern;
+package com.yz.headfrist.strategy.pattern;
 
 public abstract class Duck {
     private FlyBehavior flyBehavior;
